@@ -21,8 +21,8 @@ function App() {
   const [dataPoints, setDataPoints] = useState([]);
 
   useEffect(() => {
-    const timeStep = 0.1; 
-    let theta = (angle * Math.PI) / 180; 
+    const timeStep = 0.1;
+    let theta = (angle * Math.PI) / 180;
     let omega = 0;
     const stoppingAngle = (0.5 * Math.PI) / 180; // 0.5 stopnia
     let stopped = false;
