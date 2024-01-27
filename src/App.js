@@ -60,6 +60,23 @@ function App() {
     ],
   };
 
+  const graphOptions = {
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'Czas (s)', 
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Kąt (stopnie)', 
+        },
+      },
+    },
+  };
+
   return (
     <div>
       <h1>Symulacja Wahadła Fizycznego z Oporem Powietrza</h1>
@@ -85,7 +102,7 @@ function App() {
         <label>Współczynnik oporu powietrza: {airResistance}</label>
         <input type='range' min='0.01' max='0.1' step='0.01' value={airResistance} onChange={(e) => setAirResistance(e.target.value)} />
       </div>
-      <Line data={graphData} />
+      <Line data={graphData} options={graphOptions} />
     </div>
   );
 }
